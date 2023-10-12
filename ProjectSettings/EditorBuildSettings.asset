@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SafeZoneScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/DangerZoneScene.unity
+    guid: 071ea533e9f2f682ebbcbcff97176625
   m_configObjects: {}
