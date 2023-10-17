@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpaceshipScript : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float speed = 5f;
+    public float speed = 25f;
     
     // Start is called before the first frame update
     void Start()
