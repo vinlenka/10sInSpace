@@ -250,7 +250,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 7282734039010033742, guid: 715c9ca167f15964497738cc2f95bdcf, type: 3}
-  respawnTime: 1
+  respawnTime: 0.5
+  SpawnersAmount: 2
 --- !u!1 &1407338244
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +463,10 @@ PrefabInstance:
     - target: {fileID: 7282734039010033742, guid: 715c9ca167f15964497738cc2f95bdcf, type: 3}
       propertyPath: m_Name
       value: asteroid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282734039010033742, guid: 715c9ca167f15964497738cc2f95bdcf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
