@@ -344,6 +344,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1945387982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2051970811138329490, guid: bedf35943917c4843a6c02a63ccfc10f, type: 3}
+  m_PrefabInstance: {fileID: 238774399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2126697386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,6 +418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2500769445806635165, guid: a4f633c43d62bdb42ba9b72afbe5f380, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1945387982}
     - target: {fileID: 6720313250167281756, guid: a4f633c43d62bdb42ba9b72afbe5f380, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.826873
@@ -456,6 +465,14 @@ PrefabInstance:
     - target: {fileID: 8104435870500112620, guid: a4f633c43d62bdb42ba9b72afbe5f380, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483346396952334538, guid: a4f633c43d62bdb42ba9b72afbe5f380, type: 3}
+      propertyPath: respawnTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483346396952334538, guid: a4f633c43d62bdb42ba9b72afbe5f380, type: 3}
+      propertyPath: SpawnersAmount
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
