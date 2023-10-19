@@ -29,6 +29,10 @@ public class SwitchScene : MonoBehaviour
             Debug.Log("Scene change!");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        else {
+            Debug.Log("Scene change - back to the start!");
+            SceneManager.LoadScene(0);
+        }
     }
     
     public bool OutOfBounds() {
