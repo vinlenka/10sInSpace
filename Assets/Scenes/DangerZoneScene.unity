@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4678925294413791745, guid: bedf35943917c4843a6c02a63ccfc10f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678925294413791745, guid: bedf35943917c4843a6c02a63ccfc10f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.78
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678925294413791745, guid: bedf35943917c4843a6c02a63ccfc10f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -209,19 +209,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058627355}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bde4c16b47f351e2845f97098ba58b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  ISS: {fileID: 0}
-  m_Scene: 
-  time: 0
-  currentTime: 0
-  currentScene:
-    m_Handle: 0
-  inDanger: 0
+  spawnAsteroid: {fileID: 1058627358}
 --- !u!4 &1058627357
 Transform:
   m_ObjectHideFlags: 0
@@ -252,6 +246,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 7282734039010033742, guid: 715c9ca167f15964497738cc2f95bdcf, type: 3}
   respawnTime: 0.5
   SpawnersAmount: 2
+  dangerZonePassed: 0
 --- !u!1 &1407338244
 GameObject:
   m_ObjectHideFlags: 0
