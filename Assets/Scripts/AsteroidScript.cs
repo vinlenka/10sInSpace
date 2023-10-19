@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 using Screen = UnityEngine.Device.Screen;
 
 public class AsteroidScript : MonoBehaviour {
 
     public float speed = 10.0f;
+    public bool extraRandom = false;
+    
     private Rigidbody2D rb;
     private Vector2 screenBounds;
     private Vector2 velocity;
@@ -14,8 +17,11 @@ public class AsteroidScript : MonoBehaviour {
     void Start() {
         rb = this.GetComponent<Rigidbody2D>();
 
-        velocity = new Vector2(transform.position.x, transform.position.y).normalized * (-speed);
-
+        if (extraRandom)
+            velocity = new Vector2(transform.position.x * Random.Range(0.25f, 0.75f), transform.position.y * Random.Range(0.25f, 0.75f)).normalized * (-speed);
+        else 
+            velocity = new Vector2(transform.position.x, transform.position.y).normalized * (-speed);
+        
         rb.velocity = velocity;
         
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
