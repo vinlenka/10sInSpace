@@ -16,23 +16,27 @@ public class SwitchScene : MonoBehaviour
     }
 
     private void Update() {
-        if (spawnAsteroid != null && spawnAsteroid.dangerZonePassed)
-            LoadNextScene();
-        
-        if (player != null && OutOfBounds())
-            LoadNextScene();
-        
+        if (spawnAsteroid != null && spawnAsteroid.dangerZonePassed && player.activeSelf) {
+            // from danger zone to second safe zone
+            LoadNextScene(2);
+        }
+        else if (player != null && spawnAsteroid == null && OutOfBounds() && player.activeSelf) {
+
+            if (SceneManager.GetActiveScene().buildIndex == 0) // from first safe zone to danger zone
+                LoadNextScene(1);
+
+            else if (SceneManager.GetActiveScene().buildIndex == 2) // from second safe back to first safe zone
+                LoadNextScene(0);
+        }
+        else if (player != null && spawnAsteroid != null && OutOfBounds() && player.activeSelf) {
+            // from danger zone to first safe zone
+            LoadNextScene(0);
+        }
     }
     
-    private void LoadNextScene() {
-        if (SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings) {
-            Debug.Log("Scene change!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else {
-            Debug.Log("Scene change - back to the start!");
-            SceneManager.LoadScene(0);
-        }
+    private void LoadNextScene(int index) {
+        Debug.Log("Scene change to scene - " + index);
+        SceneManager.LoadScene(index);
     }
     
     public bool OutOfBounds() {
