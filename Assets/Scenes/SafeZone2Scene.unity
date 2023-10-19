@@ -227,9 +227,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzlePlanet
       objectReference: {fileID: 0}
+    - target: {fileID: 476501713933694905, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
+      propertyPath: m_TagString
+      value: Puzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 3266344804048120271, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
       propertyPath: m_text
-      value: Puzzle Planet
+      value: Puzzle Station
       objectReference: {fileID: 0}
     - target: {fileID: 4785823649419898163, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
       propertyPath: m_LocalScale.x
@@ -307,10 +311,53 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 476501713933694905, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 717347312}
     - targetCorrespondingSourceObject: {fileID: 932585366027419243, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
+--- !u!1 &717347311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 476501713933694905, guid: b4ccc4597da6dc84ca28204062ac6305, type: 3}
+  m_PrefabInstance: {fileID: 717347310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &717347312
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717347311}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.455
 --- !u!1 &774976369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2051970811138329490, guid: bedf35943917c4843a6c02a63ccfc10f, type: 3}
