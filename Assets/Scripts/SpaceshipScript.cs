@@ -8,6 +8,8 @@ public class SpaceshipScript : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 25f;
 
+    public bool enteredPuzzle = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +26,11 @@ public class SpaceshipScript : MonoBehaviour
             Destroy(other.gameObject);
             
             this.gameObject.SetActive(false);
+        }
+        
+        if (other.gameObject.tag.Equals("Puzzle")) {
+            Debug.Log("Entering Puzzle");
+            enteredPuzzle = true;
         }
     }
 }

@@ -32,6 +32,10 @@ public class SwitchScene : MonoBehaviour
             // from danger zone to first safe zone
             LoadNextScene(0);
         }
+        else if (player != null && player.GetComponent<SpaceshipScript>().enteredPuzzle) {
+            // from second safe zone to puzzle
+            LoadNextScene(3);
+        } 
     }
     
     private void LoadNextScene(int index) {
