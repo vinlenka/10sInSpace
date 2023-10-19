@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using Random = UnityEngine.Random;
 
 public class SpawnAsteroid : MonoBehaviour
@@ -9,14 +10,16 @@ public class SpawnAsteroid : MonoBehaviour
     public GameObject asteroidPrefab;
     public float respawnTime = 0.5f;
     public int SpawnersAmount = 2;
+    public bool dangerZonePassed;
     
     private Vector2 screenBounds;
     private bool within10s;
     private float startTime;
     
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        dangerZonePassed = false;
+        
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
 
         within10s = true;
@@ -30,6 +33,10 @@ public class SpawnAsteroid : MonoBehaviour
     private void Update() {
         if (Time.realtimeSinceStartup - startTime >= 10f) {
             within10s = false;
+        }
+        
+        if (Time.realtimeSinceStartup - startTime >= 13f) {
+            dangerZonePassed = true;
         }
     }
 
@@ -66,7 +73,7 @@ public class SpawnAsteroid : MonoBehaviour
             else
                 y = Random.Range(-screenBounds.y * 1.5f, -screenBounds.y * 1.2f); // below
         }
-
+        
         return new Vector2(x, y);
     }
     
