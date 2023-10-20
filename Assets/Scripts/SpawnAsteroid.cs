@@ -10,6 +10,8 @@ public class SpawnAsteroid : MonoBehaviour
     public GameObject asteroidPrefab;
     public float respawnTime = 0.5f;
     public int SpawnersAmount = 2;
+    
+    [HideInInspector]
     public bool dangerZonePassed;
     
     private Vector2 screenBounds;
