@@ -162,4 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 886113403650870029}
-  speed: 5
+  speed: 8.25
+  rotationSpeed: 360
+  enteredPuzzle: 0
