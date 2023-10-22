@@ -22,27 +22,27 @@ public class SwitchScene : MonoBehaviour
     private void Update() {
         if (spawnAsteroid != null && spawnAsteroid.dangerZonePassed && player.activeSelf) {
             // from danger zone to second safe zone
-            LoadNextScene(2);
+            LoadNextScene(3);
         }
         else if (player != null && spawnAsteroid == null && OutOfBounds() && player.activeSelf) {
 
-            if (SceneManager.GetActiveScene().buildIndex == 0) // from first safe zone to danger zone
-                LoadNextScene(1);
+            if (SceneManager.GetActiveScene().buildIndex == 1) // from first safe zone to danger zone
+                LoadNextScene(2);
 
-            else if (SceneManager.GetActiveScene().buildIndex == 2) // from second safe back to first safe zone
-                LoadNextScene(0);
+            else if (SceneManager.GetActiveScene().buildIndex == 3) // from second safe back to first safe zone
+                LoadNextScene(1);
         }
         else if (player != null && spawnAsteroid != null && OutOfBounds() && player.activeSelf) {
             // from danger zone to first safe zone
-            LoadNextScene(0);
+            LoadNextScene(1);
         }
         else if (player != null && player.GetComponent<SpaceshipScript>().enteredPuzzle) {
             // from second safe zone to puzzle
-            LoadNextScene(3);
+            LoadNextScene(4);
         } 
         else if (buttonUI != null && buttonUI.nextScene) {
             // from puzzle scene to second safe zone
-            LoadNextScene(2);
+            LoadNextScene(3);
         }
     }
     
