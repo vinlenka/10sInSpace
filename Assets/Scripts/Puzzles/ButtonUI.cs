@@ -6,9 +6,10 @@ using TMPro;
 using System.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
-public class ButtonUI : MonoBehaviour
-{
-    // Start is called before the first frame update
+public class ButtonUI : MonoBehaviour {
+
+    public GameObject Spaceship;
+    
     [SerializeField] GameObject DisplayScreen;
     private List<string> userPass = new List<string>();
     private string[] pass = { "Water", "Gas", "Down" };
@@ -60,6 +61,10 @@ public class ButtonUI : MonoBehaviour
         } else isCorrect = false;
         if (isCorrect) {
             nextScene = true;
+            
+            Spaceship.GetComponent<ItemCollector>().IncreaseBribe(1);
+            Spaceship.GetComponent<ItemCollector>().IncreaseCredits(100);
+            
             DisplayScreen.GetComponent<TMP_Text>().text = "Success";
         } else
         {
