@@ -8,11 +8,15 @@ public class SwitchScene : MonoBehaviour
 {
     public GameObject player;
     public SpawnAsteroid spawnAsteroid;
+    public GameObject buttonController;
+
+    private ButtonUI buttonUI;
     
     private Vector2 screenBounds;
 
     private void Start() {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        if (buttonController != null) buttonUI = buttonController.GetComponent<ButtonUI>();
     }
 
     private void Update() {
@@ -36,6 +40,10 @@ public class SwitchScene : MonoBehaviour
             // from second safe zone to puzzle
             LoadNextScene(3);
         } 
+        else if (buttonUI != null && buttonUI.nextScene) {
+            // from puzzle scene to second safe zone
+            LoadNextScene(2);
+        }
     }
     
     private void LoadNextScene(int index) {

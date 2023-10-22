@@ -12,6 +12,9 @@ public class ButtonUI : MonoBehaviour
     [SerializeField] GameObject DisplayScreen;
     private List<string> userPass = new List<string>();
     private string[] pass = { "Water", "Gas", "Down" };
+
+    [HideInInspector] public bool nextScene = false;
+    
     public void StartControlPanel()
     {
         Debug.Log("Starting...");
@@ -55,8 +58,8 @@ public class ButtonUI : MonoBehaviour
 
             }
         } else isCorrect = false;
-        if (isCorrect)
-        {
+        if (isCorrect) {
+            nextScene = true;
             DisplayScreen.GetComponent<TMP_Text>().text = "Success";
         } else
         {
