@@ -21,8 +21,8 @@ public class LevelManager : MonoBehaviour
 
     public void ReplayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Pla
+        SceneManager.LoadScene(1);
+        
     }
 
     /*
