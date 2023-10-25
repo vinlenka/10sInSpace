@@ -35,6 +35,18 @@ public class AsteroidScript : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag.Equals("spaceship"))
+        {
+            Debug.Log("Collision!");
+
+            Destroy(this.gameObject);
+            LevelManager.manager.GameOver();
+        }
+    }
+
+
     private bool OutOfBounds() {
         return transform.position.x < screenBounds.x * (-4) ||
                transform.position.x > screenBounds.x * 4 ||
