@@ -9,6 +9,7 @@ public class SwitchScene : MonoBehaviour
     public GameObject player;
     public SpawnAsteroid spawnAsteroid;
     public GameObject buttonController;
+    public AlienController alien;
 
     private ButtonUI buttonUI;
     
@@ -37,12 +38,20 @@ public class SwitchScene : MonoBehaviour
             LoadNextScene(1);
         }
         else if (player != null && player.GetComponent<SpaceshipScript>().enteredPuzzle) {
-            // from second safe zone to puzzle
-            LoadNextScene(4);
+            if (player.GetComponent<SpaceshipScript>().bribedAlien)
+            {
+                // from second safe zone to puzzle
+                LoadNextScene(4);
+            } else
+            {
+                // from second safe zone to alien
+                LoadNextScene(5);
+            }            
         } 
         else if (buttonUI != null && buttonUI.nextScene) {
-            // from puzzle scene to second safe zone
-            LoadNextScene(3);
+            // change to scene according to buttons
+            LoadNextScene(buttonUI.nextSceneId);
+            buttonUI.nextScene = false;
         }
     }
     

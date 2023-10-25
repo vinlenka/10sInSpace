@@ -17,6 +17,12 @@ public class ItemCollector : MonoBehaviour {
         creditsText.SetText("Credits: " + Credits);
     }
 
+    private void Update()
+    {
+        bribeText.SetText("Bribe: " + Bribe);
+        creditsText.SetText("Credits: " + Credits);
+    }
+
 
     public void IncreaseCredits(int credits) {
         Credits += credits;

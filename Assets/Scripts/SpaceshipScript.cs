@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpaceshipScript : MonoBehaviour
@@ -11,6 +12,7 @@ public class SpaceshipScript : MonoBehaviour
 
     [HideInInspector]
     public bool enteredPuzzle = false;
+    public bool bribedAlien = false;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +33,13 @@ public class SpaceshipScript : MonoBehaviour
         if (other.gameObject.tag.Equals("Puzzle")) {
             Debug.Log("Entering Puzzle");
             enteredPuzzle = true;
+        }
+
+        if (other.gameObject.tag.Equals("Diamond"))
+        {
+            Debug.Log("Picked up diamond");
+            Destroy(other.gameObject);
+            this.GetComponent<ItemCollector>().IncreaseBribe(10);
         }
     }
 

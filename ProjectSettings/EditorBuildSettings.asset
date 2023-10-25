@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PuzzleScene.unity
     guid: 569d61f1085bed9428835b8b6eb9da5f
+  - enabled: 1
+    path: Assets/Scenes/AlienScene.unity
+    guid: 6630c43783b4eee4b98356763d972fce
   m_configObjects: {}
