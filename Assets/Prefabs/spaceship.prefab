@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 531, y: 295}
+  m_AnchoredPosition: {x: 533, y: -247}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6418477776512256285
@@ -404,6 +404,8 @@ MonoBehaviour:
   speed: 8.25
   rotationSpeed: 360
   enteredPuzzle: 0
+  bribedAlien: 0
+  LevelManager: {fileID: 0}
 --- !u!114 &-703173613725597074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 531, y: 244.99994}
+  m_AnchoredPosition: {x: 533, y: -297}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6660160857850778387

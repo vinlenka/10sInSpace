@@ -14,6 +14,8 @@ public class SpaceshipScript : MonoBehaviour
     public bool enteredPuzzle = false;
     public bool bribedAlien = false;
 
+    public GameObject LevelManager;
+
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +28,7 @@ public class SpaceshipScript : MonoBehaviour
             Debug.Log("Collision!");
             
             Destroy(other.gameObject);
-            
+            LevelManager.GetComponent<LevelManager>().GameOver();
             this.gameObject.SetActive(false);
         }
         
