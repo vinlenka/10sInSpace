@@ -15,6 +15,7 @@ public class ButtonUI : MonoBehaviour {
     private string[] pass = { "Water", "Gas", "Down" };
 
     [HideInInspector] public bool nextScene = false;
+    [HideInInspector] public int nextSceneId;
     
     public void StartControlPanel()
     {
@@ -40,6 +41,7 @@ public class ButtonUI : MonoBehaviour {
     public void StartEnteringPass()
     {
         userPass.Clear();
+        DisplayScreen.GetComponent<TMP_Text>().text = "";
     }
 
     public void SumbitPass()
@@ -61,14 +63,29 @@ public class ButtonUI : MonoBehaviour {
         } else isCorrect = false;
         if (isCorrect) {
             nextScene = true;
-            
-            Spaceship.GetComponent<ItemCollector>().IncreaseBribe(1);
+            nextSceneId = 3;
             Spaceship.GetComponent<ItemCollector>().IncreaseCredits(100);
             
             DisplayScreen.GetComponent<TMP_Text>().text = "Success";
+
         } else
         {
             DisplayScreen.GetComponent<TMP_Text>().text = "Try again";
         }
+    }
+    public void BribeAlien()
+    {
+        if (ItemCollector.Bribe >= 10) {
+            Spaceship.GetComponent<ItemCollector>().DecreaseBribe(10);
+            Spaceship.GetComponent<SpaceshipScript>().bribedAlien = true;
+            nextScene = true;
+            nextSceneId = 4;
+        }
+    }
+
+    public void ExitToSafeZone()
+    {
+        nextScene = true;
+        nextSceneId = 3;
     }
 }
