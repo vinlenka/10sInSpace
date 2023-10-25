@@ -404,6 +404,7 @@ MonoBehaviour:
   speed: 8.25
   rotationSpeed: 360
   enteredPuzzle: 0
+  bribedAlien: 0
 --- !u!114 &-703173613725597074
 MonoBehaviour:
   m_ObjectHideFlags: 0

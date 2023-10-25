@@ -26,7 +26,7 @@ public class SpaceshipScript : MonoBehaviour
             Debug.Log("Collision!");
             
             Destroy(other.gameObject);
-            
+            LevelManager.manager.GameOver();
             this.gameObject.SetActive(false);
         }
         
