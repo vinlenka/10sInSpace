@@ -155,6 +155,7 @@ MonoBehaviour:
   Spaceship: {fileID: 2130125578}
   DisplayScreen: {fileID: 842393736}
   nextScene: 0
+  nextSceneId: 0
 --- !u!4 &30576518
 Transform:
   m_ObjectHideFlags: 0
@@ -474,7 +475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152.71002, y: -53.75499}
+  m_AnchoredPosition: {x: -132.71, y: -53.75499}
   m_SizeDelta: {x: 22, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237238025
@@ -741,7 +742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152.71, y: -30.1}
+  m_AnchoredPosition: {x: -132.71, y: -30.1}
   m_SizeDelta: {x: 22, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255181621
@@ -874,7 +875,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.9, y: -37.755}
+  m_AnchoredPosition: {x: 123.9, y: -37.755}
   m_SizeDelta: {x: 37.28, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420458799
@@ -1007,7 +1008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152.71, y: 17.6}
+  m_AnchoredPosition: {x: -127.71, y: 17.6}
   m_SizeDelta: {x: 53.44, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &533664683
@@ -1408,7 +1409,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.56499, y: 17.600006}
+  m_AnchoredPosition: {x: -83.56499, y: 17.600006}
   m_SizeDelta: {x: 52.4, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609502561
@@ -2931,7 +2932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -152.95, y: 58.54}
+  m_AnchoredPosition: {x: -127.71, y: 58.54}
   m_SizeDelta: {x: 52.97, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1021845726
@@ -3424,7 +3425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100.4, y: -40.285}
+  m_AnchoredPosition: {x: 90.4, y: -38.285}
   m_SizeDelta: {x: 18.09, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245298253
@@ -3690,7 +3691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168.43002, y: -42.295013}
+  m_AnchoredPosition: {x: -148.43, y: -42.295013}
   m_SizeDelta: {x: 22, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511202662
@@ -3823,7 +3824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104.5, y: -57.400013}
+  m_AnchoredPosition: {x: 91.5, y: -57.40001}
   m_SizeDelta: {x: 19.39, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579946535
@@ -4090,7 +4091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -136.99002, y: -42.295013}
+  m_AnchoredPosition: {x: -116.99, y: -42.295013}
   m_SizeDelta: {x: 22, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652501210
@@ -4247,6 +4248,7 @@ MonoBehaviour:
   player: {fileID: 0}
   spawnAsteroid: {fileID: 0}
   buttonController: {fileID: 30576516}
+  alien: {fileID: 0}
 --- !u!1 &1945464942
 GameObject:
   m_ObjectHideFlags: 0
